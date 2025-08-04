@@ -10,13 +10,11 @@ This is a simple Python program that:
 🚀 How to Run
 Make sure you have Python 3 installed.
 You can check by running:
-
-
 python --version
+
+
 Clone or download this repository:
-
-
-git clone https://github.com/yourusername/fun-calculator.git
+git clone https://github.com/serfine-1/Calculator.git
 Navigate to the project folder:
 
 
@@ -26,9 +24,7 @@ Run the program:
 
 python fun_calculator.py
 📄 Example
-yaml
-Copy
-Edit
+
 Enter the first number: 10
 Enter the second number: 5
 Results of your two numbers:
@@ -47,4 +43,4 @@ fun_calculator.py → main program
 README.md → this file
 
 🧑‍💻 Author
-Your Name (replace with your actual name)
+Serfine Anyango
