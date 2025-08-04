@@ -1,7 +1,7 @@
 🎉 Fun Calculator 🎉
 =====================
 
-Welcome to the **Fun Calculator!**
+Welcome to the **Calculator.py**
 
 This is a simple Python program that:
 
@@ -19,13 +19,13 @@ This is a simple Python program that:
    > python --version
 
 2. Clone or download this repository:
-   > git clone https://github.com/yourusername/fun-calculator.git
+   > git clone 
 
 3. Navigate to the project folder:
-   > cd fun-calculator
+   > cd Calculator
 
 4. Run the program:
-   > python fun_calculator.py
+   > python Calculator.py
 
 ------------------------------------------------------------
 
@@ -54,7 +54,7 @@ Quotient: 2.0
 📂 Files
 --------
 
-- fun_calculator.py — Main program
+- Calculator.py — Main program
 - README.txt — Project information
 
 ------------------------------------------------------------
@@ -62,5 +62,5 @@ Quotient: 2.0
 🧑‍💻 Author
 ------------
 
-Your Name (replace this with your real name)
+Serfine Anyango
 
