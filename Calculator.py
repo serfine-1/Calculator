@@ -1,28 +1,64 @@
 # 🎉 Welcome to the Fun Calculator! 🎉
+# Menu-driven calculator that performs only the chosen operation and repeats until exit
 
-# We're using 'float()' to make sure our numbers can have decimals too. Fancy, right? ✨
-num1 = float(input("Enter the first number: "))
+def get_number(prompt):
+    while True:
+        try:
+            return float(input(prompt))
+        except ValueError:
+            print("❌ That's not a valid number. Try again.")
 
-# Same trick here—using 'float()' for decimal magic! 🧙‍♂️
-num2 = float(input("Enter the second number: "))
+def calculator():
+    while True:
+        print("\nChoose an operation:")
+        print("1) Addition (+)")
+        print("2) Subtraction (-)")
+        print("3) Multiplication (*)")
+        print("4) Division (/)")
+        print("5) Exponentiation (^)")
+        print("6) Modulus (%)")
+        print("7) Square Root (√)")
+        print("8) Exit")
 
-# Add the two numbers (Yay! Addition is the first step to fun!) ➕
-sum_result = num1 + num2
+        choice = input("Enter your choice (1-8): ").strip()
 
-# Subtract the second number from the first (Negative vibes, but necessary! 😜) ➖
-difference_result = num1 - num2
+        if choice == "8":
+            print("👋 Goodbye!")
+            break
 
-# Multiply the two numbers (More bang for your buck! 💥) ✖️
-product_result = num1 * num2
+        if choice not in {"1","2","3","4","5","6","7"}:
+            print("❌ Invalid choice. Please choose 1-8.")
+            continue
 
-# We'll assume the user is being responsible and not dividing by zero for now!
-quotient_result = num1 / num2
+        if choice == "7":
+            num = get_number("Enter the number: ")
+            if num < 0:
+                print("⚠️ Error: Cannot take the square root of a negative number.")
+            else:
+                print(f"✅ √{num} = {num ** 0.5}")
+            continue
 
-# Step 4: Show the user what we got! 🥳 Time for the big reveal! 🎉
-print(f"Results of your two numbers:")
-print(f"Sum: {sum_result}")  # ➕
-print(f"Difference: {difference_result}")  # ➖
-print(f"Product: {product_result}")  # ✖️
-print(f"Quotient: {quotient_result}")  # ➗
+        num1 = get_number("Enter the first number: ")
+        num2 = get_number("Enter the second number: ")
 
-# 🏁 And that's it! You've just made a mini-calculator! 😎💻
+        if choice == "1":
+            print(f"✅ {num1} + {num2} = {num1 + num2}")
+        elif choice == "2":
+            print(f"✅ {num1} - {num2} = {num1 - num2}")
+        elif choice == "3":
+            print(f"✅ {num1} * {num2} = {num1 * num2}")
+        elif choice == "4":
+            if num2 == 0:
+                print("⚠️ Error: Division by zero is not allowed.")
+            else:
+                print(f"✅ {num1} / {num2} = {num1 / num2}")
+        elif choice == "5":
+            print(f"✅ {num1} ^ {num2} = {num1 ** num2}")
+        elif choice == "6":
+            if num2 == 0:
+                print("⚠️ Error: Modulus by zero is not allowed.")
+            else:
+                print(f"✅ {num1} % {num2} = {num1 % num2}")
+
+if __name__ == "__main__":
+    calculator()
