@@ -4,7 +4,7 @@ Welcome to the **Calculator.py**
 
 This is a simple Python program that:
 
-✅ Accepts two numbers from the user  
+✅ Accepts numbers from the user  
 ✅ Calculates their sum, difference, product, and quotient  
 ✅ Prints all the results in a friendly and fun way
 
